@@ -3,7 +3,7 @@ const cors=require("cors")
 const mongoose=require("mongoose")
 
 const SignUpRoute=require("./controller/SignUpRouter")
-
+const PostRoute=require("./controller/PostRouter")
 const app=express()
 
 app.use(express.json())
@@ -14,6 +14,7 @@ mongoose.connect("mongodb+srv://snehaks:Snehaks2000@cluster0.rauhjed.mongodb.net
 )
 
 app.use("/api/log",SignUpRoute)
+app.use("/api/post",PostRoute)
 
 app.listen(3001,(req,res)=>{
     console.log("server running")

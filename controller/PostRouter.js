@@ -13,4 +13,7 @@ router.post("/add",async(req,res)=>{
     })
 })
 
+router.get("/view",async(req,res)=>{
+    let result=
+})
 module.exports=router
